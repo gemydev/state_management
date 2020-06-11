@@ -1,0 +1,13 @@
+## to use provider :
+                   1) Collect the required data aod operations in one class extends ChangeNotifier
+                   2) use notifyListeners(); inside the operations
+                   2) use ChangeNotifierProvider() in main function
+                      or in the highest point that you need the data
+                   3) use Consumer<>() in the place Where you want the data
+
+void main() {
+  runApp(ChangeNotifierProvider<Cart>(
+    create: (context) => Cart(),
+    child: Home(),
+  ));
+}
